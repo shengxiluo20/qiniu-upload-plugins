@@ -1,0 +1,26 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+      <f:entry title="文件路径" field="source" help="/plugin/qiniu-upload-plugins/help-qiniusource.html">
+        <f:textbox/>
+      </f:entry>
+
+      <f:entry title="要上传到的 bucket" field="bucket" help="/plugin/qiniu-upload-plugins/help-qiniubucket.html">
+        <f:textbox/>
+      </f:entry>
+
+      <f:entry title="要上传到的 zone" field="zone" help="/plugin/qiniu-upload-plugins/help-qiniuzone.html">
+        <f:textbox/>
+      </f:entry>
+
+      <f:entry title="上传到服务器后要删除的路径" field="subKey" help="/plugin/qiniu-upload-plugins/help-qiniusubkey.html">
+        <f:textbox/>
+      </f:entry>
+
+      <f:entry title="构建失败则不上传" field="noUploadOnFailure">
+	    <f:checkbox/>
+      </f:entry>
+      <f:entry title="如果已存在则不覆盖" field="noUploadOnExists">
+        <f:checkbox/>
+      </f:entry>
+</j:jelly>
