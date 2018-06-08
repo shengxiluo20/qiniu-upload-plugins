@@ -154,7 +154,7 @@ public class QiniuPublisher extends Publisher implements SimpleBuildStep {
             }
 
             try {
-                upToken = auth.uploadToken(this.bucket);
+                upToken = auth.uploadToken(this.bucket, key);
                 logger.println("upToken:" + upToken);
                 Response response = uploadManager.put(path.getRemote(), key, upToken);
 
